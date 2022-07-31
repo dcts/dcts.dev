@@ -605,20 +605,20 @@ window.addEventListener("DOMContentLoaded", () => {
     //     pointers[0].color = generateColor();
     // });
 
-    // canvas.addEventListener('touchstart', e => {
-    //     e.preventDefault();
-    //     const touches = e.targetTouches;
-    //     for (let i = 0; i < touches.length; i++) {
-    //         if (i >= pointers.length)
-    //             pointers.push(new pointerPrototype());
+    canvas.addEventListener('touchstart', e => {
+        e.preventDefault();
+        const touches = e.targetTouches;
+        for (let i = 0; i < touches.length; i++) {
+            if (i >= pointers.length)
+                pointers.push(new pointerPrototype());
 
-    //         pointers[i].id = touches[i].identifier;
-    //         pointers[i].down = true;
-    //         pointers[i].x = touches[i].pageX;
-    //         pointers[i].y = touches[i].pageY;
-    //         pointers[i].color = generateColor();
-    //     }
-    // });
+            pointers[i].id = touches[i].identifier;
+            pointers[i].down = true;
+            pointers[i].x = touches[i].pageX;
+            pointers[i].y = touches[i].pageY;
+            pointers[i].color = generateColor();
+        }
+    });
 
     // window.addEventListener('mouseup', () => {
     //     pointers[0].down = false;
