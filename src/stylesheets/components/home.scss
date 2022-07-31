@@ -79,6 +79,9 @@
   * {
     // background-color: red !important;
   }
+  .color-container {
+    display:flex !important;
+  }
 }
 
 @media (min-width: 1366px) {
@@ -98,7 +101,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     .color-container {
-      display:flex;
+      display:none;
       .color-circle {
         width: 60px;
         height: 60px;

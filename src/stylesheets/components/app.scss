@@ -1,28 +1,4 @@
-// * {
-// }
-
-// html {
-//   height: 100%;
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   outline: 0;
-//   -webkit-tap-highlight-color: transparent;
-//   -webkit-touch-callout: none;
-// }
-
-* {
-  // cursor: none;
-  // -webkit-user-select: none;
-  // -moz-user-select: none;
-  // -ms-user-select: none;
-  // user-select: none;
-  // -webkit-box-sizing: border-box;
-  // box-sizing: border-box;
-}
-
 html {
-  // display: block;
   height: 100%;
   width: 100%;
 }
@@ -40,12 +16,21 @@ body {
   position: relative;
   height: 100%;
 }
-canvas {
+canvas#background-canvas {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
 }
+canvas.confetti {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+
 // // Basic Styling
 // .flex {
 //   display: flex;
