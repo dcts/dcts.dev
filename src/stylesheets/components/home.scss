@@ -107,20 +107,35 @@ footer {
         margin: 8px;
         cursor: pointer;
       }
-      .color-1{
+      .color-orange {
         background: $orange;
+        &:hover {
+          box-shadow: 0px 5px 40px 0px $orange;
+        }
       }
-      .color-2{
+      .color-blue {
         background: $blue;
+        &:hover {
+          box-shadow: 0px 5px 40px 0px $blue;
+        }
       }
-      .color-3{
+      .color-red {
         background: $red;
+        &:hover {
+          box-shadow: 0px 5px 40px 0px $red;
+        }
       }
-      .color-4{
+      .color-pink {
         background: $pink;
+        &:hover {
+          box-shadow: 0px 5px 40px 0px $pink;
+        }
       }
-      .color-5{
+      .color-yellow {
         background: $yellow;
+        &:hover {
+          box-shadow: 0px 5px 40px 0px $yellow;
+        }
       }
     }
   }
