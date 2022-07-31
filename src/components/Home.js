@@ -3,7 +3,10 @@ const Home = () => {
     <div className="home-container">
       <div className="home-content">
         <header>
-          header content
+          <div className="nav">
+            <div className="selected">Home</div>
+            <div>Projects</div>
+          </div>
         </header>
 
         <section>
@@ -24,7 +27,16 @@ const Home = () => {
         </section>
 
         <footer>
-          footer content
+          <div className="footer-container">
+            <p>dcts@google.com</p>
+            <div className="color-container">
+              <div className="color-circle color-1"></div>
+              <div className="color-circle color-2"></div>
+              <div className="color-circle color-3"></div>
+              <div className="color-circle color-4"></div>
+              <div className="color-circle color-5"></div>
+            </div>
+          </div>
         </footer>
         {/* <div className="title-text">
         </div> */}
