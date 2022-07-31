@@ -606,33 +606,37 @@ window.addEventListener("DOMContentLoaded", () => {
     //     pointers[0].color = generateColor();
     // });
 
-    // canvas.addEventListener('touchstart', e => {
-    //     console.log("touchstart...");
-    //     e.preventDefault();
-    //     const touches = e.targetTouches;
-    //     for (let i = 0; i < touches.length; i++) {
-    //         if (i >= pointers.length)
-    //             pointers.push(new pointerPrototype());
+    canvas.addEventListener('touchstart', e => {
+        console.log("touchstart...");
+        e.preventDefault();
+        pointers[0].down = true;
+        pointers[0].color = generateColor();
+        const touches = e.targetTouches;
+        for (let i = 0; i < touches.length; i++) {
+            if (i >= pointers.length)
+                pointers.push(new pointerPrototype());
 
-    //         pointers[i].id = touches[i].identifier;
-    //         pointers[i].down = true;
-    //         pointers[i].x = touches[i].pageX;
-    //         pointers[i].y = touches[i].pageY;
-    //         pointers[i].color = generateColor();
-    //     }
-    // });
+            pointers[i].id = touches[i].identifier;
+            pointers[i].down = true;
+            pointers[i].x = touches[i].pageX;
+            pointers[i].y = touches[i].pageY;
+            pointers[i].color = generateColor();
+        }
+    });
 
     // window.addEventListener('mouseup', () => {
     //     pointers[0].down = false;
     // });
 
-    // window.addEventListener('touchend', e => {
-    //     const touches = e.changedTouches;
-    //     for (let i = 0; i < touches.length; i++)
-    //         for (let j = 0; j < pointers.length; j++)
-    //             if (touches[i].identifier == pointers[j].id)
-    //                 pointers[j].down = false;
-    // });
+    window.addEventListener('touchend', e => {
+        pointers[0].down = true;
+        pointers[0].color = generateColor();
+        const touches = e.changedTouches;
+        for (let i = 0; i < touches.length; i++)
+            for (let j = 0; j < pointers.length; j++)
+                if (touches[i].identifier == pointers[j].id)
+                    pointers[j].down = false;
+    });
 
     // window.addEventListener('keydown', e => {
     //     if (e.code === 'KeyP')
