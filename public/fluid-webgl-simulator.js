@@ -601,11 +601,6 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }, false);
 
-    // canvas.addEventListener('mousedown', () => {
-    //     pointers[0].down = true;
-    //     pointers[0].color = generateColor();
-    // });
-
     canvas.addEventListener('touchstart', e => {
         console.log("touchstart...");
         e.preventDefault();
@@ -624,10 +619,6 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // window.addEventListener('mouseup', () => {
-    //     pointers[0].down = false;
-    // });
-
     window.addEventListener('touchend', e => {
         pointers[0].down = true;
         pointers[0].color = generateColor();
@@ -637,13 +628,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 if (touches[i].identifier == pointers[j].id)
                     pointers[j].down = false;
     });
-
-    // window.addEventListener('keydown', e => {
-    //     if (e.code === 'KeyP')
-    //         config.PAUSED = !config.PAUSED;
-    //     if (e.key === ' ')
-    //         splatStack.push(parseInt(Math.random() * 20) + 5);
-    // });
 
     initFramebuffers();
     multipleSplats(parseInt(Math.random() * 20) + 5);
