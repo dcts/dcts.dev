@@ -112,7 +112,7 @@ const Home = () => {
 
         <footer>
           <div className="footer-container">
-            <p>dcts@google.com</p>
+            <p className="send-text"><a className="remove-all-link-styling" href="mailto:dcts@google.com">dcts@google.com</a></p>
             <div className="color-container">
               <div onClick={() => fireConfetti("orange")} className="color-circle color-orange"></div>
               <div onClick={() => fireConfetti("blue")} className="color-circle color-blue"></div>
