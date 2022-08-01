@@ -30,7 +30,6 @@ canvas.confetti {
   opacity: 0.6;
 }
 
-
 // // Basic Styling
 // .flex {
 //   display: flex;
@@ -44,11 +43,6 @@ canvas.confetti {
 // .pointer {
 //   cursor: pointer;
 // }
-.remove-all-link-styling {
-  outline: 0;
-  text-decoration: none;
-  color: white;
-}
 // .pos-relative {
 //   position: relative;
 // }
@@ -75,3 +69,8 @@ canvas.confetti {
 // .underscore {
 //   text-decoration: underline;
 // }
+.remove-all-link-styling {
+  outline: 0;
+  text-decoration: none;
+  color: white;
+}

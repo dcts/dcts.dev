@@ -1,17 +1,7 @@
-import { useEffect, useRef } from 'react';
 import ReactCanvasConfetti from 'react-canvas-confetti';
 
-
-
-
 const Home = () => {
-  let myBackgroundCanvas = useRef(null);
   let confetti; 
-
-  useEffect(() => {
-    console.log("Background Canvas:");
-    console.log(myBackgroundCanvas.current);
-  }, []);
 
   const fireConfetti = (color) => {
     const targetColor = {
@@ -21,69 +11,57 @@ const Home = () => {
       "pink": "#EFB1ED",
       "yellow": "#FFE484",
     }[color];
-
-    // starting the animation with custom settings
-    console.log("starting the animation with custom settings => color: " + targetColor);
-    // confetti({particleCount: Math.ceil(Math.random() * 1000), spread: 180});
-
-
+    
+    // "fireworks" example, taken from canvas-confetti library and
+    // translated to match react-canvas-confetti library
+    // => https://www.kirilv.com/canvas-confetti/
     const randomInRange = (min, max) =>  Math.random() * (max - min) + min;
-
-    const duration = 5 * 1000;
+    const duration = 5 * 1000; // 5 seconds
     const animationEnd = Date.now() + duration;
-
     const interval = setInterval(() => {
       const timeLeft = animationEnd - Date.now();
-
       if (timeLeft <= 0) {
         return clearInterval(interval);
       }
-
       const particleCount = 50 * (timeLeft / duration);
-      // since particles fall down, start a bit higher than random
-      confetti({
+      const defaultSettings = {
         startVelocity: 30, 
         spread: 360, 
         ticks: 60, 
         zIndex: 0,
         particleCount: particleCount,
+        colors: [targetColor],
+      }
+      // fire 2 x confetti per interval
+      confetti({
+        ...defaultSettings, 
         origin: { 
           x: randomInRange(0.1, 0.3), 
-          y: Math.random() - 0.2 
+          y: Math.random() - 0.2 // since particles fall down, start a bit higher than random
         },
-        colors: [targetColor],
       });
       confetti({
-        startVelocity: 30, 
-        spread: 360, 
-        ticks: 60, 
-        zIndex: 0,
-        particleCount: 50,
+        ...defaultSettings, 
         origin: { 
           x: randomInRange(0.7, 0.9), 
-          y: Math.random() - 0.2 
+          y: Math.random() - 0.2 // since particles fall down, start a bit higher than random
         },
-        colors: [targetColor],
       });
-
-      // confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-      // confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
     }, 250);
   }
 
   const getInstance = (instance) => {
     // saving the instance to an internal property
-    console.log("saving the instance to an internal property");
     confetti = instance;
   }
 
+
   return (
     <div className="home-container">
-      <canvas ref={myBackgroundCanvas} id="background-canvas"></canvas>
+      <canvas id="background-canvas"></canvas>
       <ReactCanvasConfetti
         className={'confetti'}
         refConfetti={getInstance}
-        ref={myBackgroundCanvas}
       />
       <div className="home-content">
         <header>
