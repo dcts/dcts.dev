@@ -50,6 +50,9 @@ html, body {
     }
 
     footer {
+      .send-text {
+        margin-right: 20px;
+      }
       user-select: none;
       .footer-container {
         display: flex;
@@ -100,6 +103,20 @@ html, body {
               box-shadow: 0px 5px 40px 0px $yellow;
             }
           }
+        }
+      }
+      .footer-left {
+        display: flex;
+        align-items: center;
+      }
+      .social-icon {
+        display: none;
+        padding:20px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        &:hover {
+          color: $yellow;
         }
       }
     }
@@ -157,10 +174,14 @@ html, body {
     font-size: 67px !important;
     width: 67rem;
   }
+  .footer-left .social-icon {
+    display:inline !important;
+  }
 }
 
 .home-container .send-text:hover,
 .bold-on-hover:hover {
-  font-weight: bold;
+  // font-weight: bold;
+  text-shadow: 0 0.015em #ffffff,0 -0.015em #ffffff,0.01em 0 #ffffff,-0.01em 0 #ffffff;
   -webkit-tap-highlight-color: transparent;
 }
