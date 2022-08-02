@@ -1,8 +1,14 @@
 import ReactCanvasConfetti from 'react-canvas-confetti';
+import { useEffect } from 'react';
+import { welcomeConsoleMessage } from './helper/Helper';
 
 const Home = () => {
   let confetti; 
 
+  useEffect(() => {
+    welcomeConsoleMessage();
+  }, [])
+  
   const fireConfetti = (color) => {
     const targetColor = {
       "orange": "#FFAA79",
@@ -58,11 +64,15 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      {/* canvas for fluid webgl animation */}
       <canvas id="background-canvas"></canvas>
+      
+      {/* canvas for confetti cannon animation */}
       <ReactCanvasConfetti
         className={'confetti'}
         refConfetti={getInstance}
       />
+      
       <div className="home-content">
         <header>
           <div className="nav">
@@ -83,7 +93,11 @@ const Home = () => {
               <span className="light-grey">breaking things at</span><br></br>
             </div>
             <div>
-              <span><a className="remove-all-link-styling underscore-on-hover" href="https://liist.com" target="_blank">Liist</a>.</span>
+              <span>
+                <a className="remove-all-link-styling underscore-on-hover" rel="noreferrer" href="https://liist.com" target="_blank">
+                  Liist
+                </a>.
+              </span>
             </div>
           </h1>
         </section>
