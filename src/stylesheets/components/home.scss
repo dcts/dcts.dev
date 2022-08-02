@@ -159,7 +159,8 @@ html, body {
   }
 }
 
-.home-container .send-text:hover {
+.home-container .send-text:hover,
+.bold-on-hover:hover {
   font-weight: bold;
   -webkit-tap-highlight-color: transparent;
 }

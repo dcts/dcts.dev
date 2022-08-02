@@ -83,14 +83,14 @@ const Home = () => {
               <span className="light-grey">breaking things at</span><br></br>
             </div>
             <div>
-              <span>Google.</span>
+              <span><a className="remove-all-link-styling underscore-on-hover" href="https://liist.com" target="_blank">Liist</a>.</span>
             </div>
           </h1>
         </section>
 
         <footer>
           <div className="footer-container">
-            <p className="send-text"><a className="remove-all-link-styling" href="mailto:dcts@google.com">dcts@google.com</a></p>
+            <p className="send-text underscore-on-hover"><a className="remove-all-link-styling" href="mailto:thomas@liist.com">thomas@liist.com</a></p>
             <div className="color-container">
               <div onClick={() => fireConfetti("orange")} className="color-circle color-orange"></div>
               <div onClick={() => fireConfetti("blue")} className="color-circle color-blue"></div>
