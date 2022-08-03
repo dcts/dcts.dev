@@ -1,7 +1,7 @@
 import ReactCanvasConfetti from 'react-canvas-confetti';
 import { useEffect } from 'react';
 import { welcomeConsoleMessage } from './helper/Helper';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 const Home = () => {
   let confetti; 
@@ -108,6 +108,7 @@ const Home = () => {
             <div className="footer-left">
               <p className="send-text underscore-on-hover"><a className="remove-all-link-styling" href="mailto:thomas@dcts.dev">thomas@dcts.dev</a></p>
               <a className="unset" href="https://github.com/dcts" rel="noreferrer" target="_blank"><BsGithub className="social-icon"/></a>
+              <a className="unset" href="https://twitter.com/dcts_dev/" rel="noreferrer" target="_blank"><BsTwitter className="social-icon"/></a>
               <a className="unset" href="https://www.linkedin.com/in/thomas-starzynski/" rel="noreferrer" target="_blank"><BsLinkedin className="social-icon"/></a>
             </div>
             <div className="color-container">
