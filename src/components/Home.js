@@ -95,8 +95,8 @@ const Home = () => {
             </div>
             <div>
               <span>
-                <a className="remove-all-link-styling underscore-on-hover" rel="noreferrer" href="https://liist.com" target="_blank">
-                  Liist
+                <a className="remove-all-link-styling underscore-on-hover" rel="noreferrer" href="https://google.com" target="_blank">
+                  Google
                 </a>.
               </span>
             </div>
