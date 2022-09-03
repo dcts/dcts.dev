@@ -90,15 +90,25 @@ const Home = () => {
             <div>
               <span className="light-grey">A fullstack web </span><br></br>
               <span className="light-grey">developer currently </span><br></br>
-              <span className="light-grey">making & mostly </span><br></br>
-              <span className="light-grey">breaking things at</span><br></br>
+              <span className="light-grey">
+                working at
+                <span style={{marginLeft: "20px"}}>
+                  <a className="remove-all-link-styling underscore-on-hover" rel="noreferrer" href="https://area120.google.com/" target="_blank">
+                    Google
+                  </a>.
+                </span>
+              </span>
+              <br></br>
+              <span className="light-grey">
+                Previously
+                <span style={{marginLeft: "20px"}}>
+                  <a className="remove-all-link-styling underscore-on-hover" rel="noreferrer" href="https://liist.com/" target="_blank">
+                    Liist
+                  </a>.
+                </span>
+              </span>
             </div>
             <div>
-              <span>
-                <a className="remove-all-link-styling underscore-on-hover" rel="noreferrer" href="https://google.com" target="_blank">
-                  Google
-                </a>.
-              </span>
             </div>
           </h1>
         </section>
